@@ -96,7 +96,7 @@ pokazać, jak atak wygląda z poziomu arkusza bez pisania kodu: **tabela przesta
 zliczająca logowania wg adresu IP i typu zdarzenia, **wykres** oraz **formatowanie
 warunkowe** wyróżniające adres atakującego.
 
-![Analiza logów SSH w Excelu](excel-analiza.png)
+![Analiza logów SSH w Excelu](excel-analiza-ssh.png)
 
 Wynik jest zbieżny ze skryptem: adres `192.168.1.10` odpowiada za 30 nieudanych
 logowań, podczas gdy pozostałe adresy mają pojedyncze wpisy.
