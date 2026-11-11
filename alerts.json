@@ -1,0 +1,16 @@
+[
+  {
+    "severity": "high",
+    "src_ip": "192.168.1.10",
+    "failed_attempts": 30,
+    "targeted_users": [
+      "tester"
+    ],
+    "first_seen": "2026-03-19 05:25:00",
+    "last_seen": "2026-03-19 05:25:29",
+    "successful_breach": true,
+    "mitre": "T1110",
+    "breach_user": "tester",
+    "breach_time": "2026-03-19 05:25:30"
+  }
+]
