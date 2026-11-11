@@ -1,0 +1,26 @@
+title: SSH Brute-Force (wiele nieudanych logowań z jednego IP)
+id: 8f2b1c90-ssh-bruteforce-lab
+status: experimental
+description: >
+  Wykrywa atak słownikowy / brute-force na usługę SSH: serię nieudanych
+  logowań (Failed password) z jednego adresu IP w krótkim czasie.
+author: Amelia Skoczylas
+date: 2026/11/11
+logsource:
+  product: linux
+  service: sshd
+detection:
+  selection:
+    message|contains: 'Failed password'
+  timeframe: 60s
+  condition: selection | count() by src_ip >= 5
+fields:
+  - src_ip
+  - user
+falsepositives:
+  - Użytkownik wielokrotnie myli hasło
+  - Serwer automatyzacji ze źle skonfigurowanymi poświadczeniami
+level: high
+tags:
+  - attack.credential_access
+  - attack.t1110        # Brute Force
