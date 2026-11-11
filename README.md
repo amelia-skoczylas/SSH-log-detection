@@ -22,6 +22,8 @@ w krótkim czasie, często zakończonych udanym logowaniem (włamaniem).
 | `sigma/ssh_bruteforce.yml` | Reguła detekcji w formacie Sigma (standard używany w SIEM) |
 | `alerts.json` | Alerty wyeksportowane do formatu gotowego do integracji z SIEM |
 | `timeline.svg` | Wykres nieudanych logowań w czasie (generowany przez skrypt) |
+| `analiza-logow-ssh.xlsx` | Analiza tych samych zdarzeń w Excelu (tabela przestawna + wykres) |
+| `auth_events.csv` | Zdarzenia z logu w formie tabelarycznej (źródło do analizy w Excelu) |
 
 ## Logika detekcji
 
@@ -86,6 +88,18 @@ lub do dalszej obróbki:
   "mitre": "T1110"
 }
 ```
+
+## Analiza w Excelu
+
+Ten sam zbiór zdarzeń (`auth_events.csv`) przeanalizowano również w Excelu, aby
+pokazać, jak atak wygląda z poziomu arkusza bez pisania kodu: **tabela przestawna**
+zliczająca logowania wg adresu IP i typu zdarzenia, **wykres** oraz **formatowanie
+warunkowe** wyróżniające adres atakującego.
+
+![Analiza logów SSH w Excelu](excel-analiza.png)
+
+Wynik jest zbieżny ze skryptem: adres `192.168.1.10` odpowiada za 30 nieudanych
+logowań, podczas gdy pozostałe adresy mają pojedyncze wpisy.
 
 ## Wnioski
 
