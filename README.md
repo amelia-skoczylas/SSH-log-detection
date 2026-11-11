@@ -22,7 +22,7 @@ w krótkim czasie, często zakończonych udanym logowaniem (włamaniem).
 | `sigma/ssh_bruteforce.yml` | Reguła detekcji w formacie Sigma (standard używany w SIEM) |
 | `alerts.json` | Alerty wyeksportowane do formatu gotowego do integracji z SIEM |
 | `timeline.svg` | Wykres nieudanych logowań w czasie (generowany przez skrypt) |
-| `analiza-logow-ssh.xlsx` | Analiza tych samych zdarzeń w Excelu (tabela przestawna + wykres) |
+| `analiza-logow-ssh.xls` | Analiza tych samych zdarzeń w Excelu (tabela przestawna + wykres) |
 | `auth_events.csv` | Zdarzenia z logu w formie tabelarycznej (źródło do analizy w Excelu) |
 
 ## Logika detekcji
